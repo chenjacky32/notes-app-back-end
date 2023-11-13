@@ -14,11 +14,11 @@ const addNotehandler = (request, h) => {
 
   notes.push(newNote);
 
-  const isSucces = notes.filter((note) => note.id === id).length > 0;
+  const isSuccess = notes.filter((note) => note.id === id).length > 0;
 
-  if (isSucces) {
+  if (isSuccess) {
     const response = h.response({
-      status: 'succes',
+      status: 'success',
       message: 'Catatan berhasil ditambahkan',
       data: {
         noteId: id,
@@ -38,7 +38,7 @@ const addNotehandler = (request, h) => {
 };
 
 const getAllNotesHandler = () => ({
-  status: 'succes',
+  status: 'success',
   data: {
     notes,
   },
